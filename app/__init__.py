@@ -28,15 +28,13 @@ while True:
             pygame.quit()
             exit()
 
-    for _ in range(10):  # Кількість рухів для тряски
-        # Випадкові зміщення
-        offset_x = random.randint(-5, 5)  # Випадкове зміщення по X
-        offset_y = random.randint(-5, 5)  # Випадкове зміщення по Y
+    for _ in range(10):
 
-        # Переміщення об'єкта
+        offset_x = random.randint(-5, 5)
+        offset_y = random.randint(-5, 5)
+
         screen.blit(washing_machine, (washing_machine_rect.x + offset_x, washing_machine_rect.y + offset_y))
 
-        # Оновлення екрану
         pygame.display.flip()
         pygame.time.delay(20)
 
